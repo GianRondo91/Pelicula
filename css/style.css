@@ -1,3 +1,109 @@
+:root {
+    --rojo: #E50914;
+    --fondo: #141414;
+    --menu: #AAA;
+    --linkActive: #FFF;
+    --textWhite: #fff;
+    --gradient: linear-gradient(rgba(0, 0, 0, .50)0%, rgba(0, 0, 0, .50) 100%);
+    --button: rgba(0, 0, 0, 0.5);
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*HEADER*/
+
+.content {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    padding: 1.87em 0;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: var(--menu);
+    text-decoration: none;
+    margin-left: 1.25em;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: var(--linkActive);
+}
+
 .logo {
     width: 8em;
+}
+
+
+/*MAIN*/
+
+.principal-movie {
+    font-size: 1em;
+    min-height: 40.62em;
+    color: var(--textWhite);
+    background: var(--gradient), url(../img/portada.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.principal-movie .content {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.principal-movie .title {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.principal-movie .description {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.principal-movie .button {
+    background: var(--button);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: var(--textWhite);
+    margin-left: 1.25em;
+    cursor: pointer;
+    transition: 3.s ease all;
+    font-size: 1.12em;
+}
+
+.principal-movie .button:hover {
+    background: var(--textWhite);
+    color: var(--black);
+}
+
+.principal-movie .button i {
+    margin-right: 1.25em;
 }
