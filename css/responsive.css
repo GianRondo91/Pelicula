@@ -1,0 +1,17 @@
+/**/
+
+@media screen and (max-width: 800px) {
+    header .logo {
+        margin-bottom: 0.62em;
+    }
+    header .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .principal-movie {
+        font-size: 0.87em;
+    }
+    .principal-movie .description {
+        max-width: 100%;
+    }
+}
