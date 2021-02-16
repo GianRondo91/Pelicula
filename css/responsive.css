@@ -14,4 +14,17 @@
     .principal-movie .description {
         max-width: 100%;
     }
+    .film-recommended .content-carousel {
+        overflow: visible;
+    }
+    .film-recommended .content-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25em;
+    }
+    .film-recommended .indicators,
+    .film-recommended .arrow-left,
+    .film-recommended .arrow-right {
+        display: none;
+    }
 }

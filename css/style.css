@@ -3,9 +3,11 @@
     --fondo: #141414;
     --menu: #AAA;
     --linkActive: #FFF;
-    --textWhite: #fff;
+    --white: #fff;
     --gradient: linear-gradient(rgba(0, 0, 0, .50)0%, rgba(0, 0, 0, .50) 100%);
-    --button: rgba(0, 0, 0, 0.5);
+    --transparent3: rgba(0, 0, 0, 0.3);
+    --transparent5: rgba(0, 0, 0, 0.5);
+    --transparent7: rgba(0, 0, 0, .7);
     --black: #000;
 }
 
@@ -54,12 +56,12 @@ header nav a.active {
 }
 
 
-/*MAIN*/
+/*principal-movie*/
 
 .principal-movie {
     font-size: 1em;
     min-height: 40.62em;
-    color: var(--textWhite);
+    color: var(--white);
     background: var(--gradient), url(../img/portada.jpg);
     background-position: center center;
     background-size: cover;
@@ -87,12 +89,15 @@ header nav a.active {
     margin-bottom: 1.25em;
 }
 
+
+/*button*/
+
 .principal-movie .button {
-    background: var(--button);
+    background: var(--transparent5);
     border: none;
     border-radius: 0.31em;
     padding: 0.93em 1.87em;
-    color: var(--textWhite);
+    color: var(--white);
     margin-left: 1.25em;
     cursor: pointer;
     transition: 3.s ease all;
@@ -100,10 +105,122 @@ header nav a.active {
 }
 
 .principal-movie .button:hover {
-    background: var(--textWhite);
+    background: var(--white);
     color: var(--black);
 }
 
 .principal-movie .button i {
     margin-right: 1.25em;
+}
+
+
+/*content-title-controls*/
+
+.content-title-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.content-title-controls h3 {
+    color: var(--white);
+    font-size: 1.87em;
+}
+
+.content-title-controls .indicators button {
+    background: white;
+    height: 0.18em;
+    width: 0.62em;
+    cursor: pointer;
+    border: none;
+    margin-right: 0.12em;
+}
+
+.content-title-controls .indicators button:hover,
+.content-title-controls .indicators button:active {
+    background: var(--rojo);
+}
+
+
+/*film-recommended*/
+
+.film-recommended {
+    margin-bottom: 4.37em;
+}
+
+
+/*films*/
+
+.film a img {
+    /* width: 40em; */
+}
+
+.film-recommended .content-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.film-recommended .content-principal .arrow-left,
+.film-recommended .content-principal .arrow-right {
+    position: absolute;
+    border: none;
+    background: var(--transparent3);
+    font-size: 2.5em;
+    height: 50%;
+    /*50% del tamaño del contenedor - 25% del alto del boton */
+    top: calc(50% - 25%);
+    line-height: 2.5em;
+    width: 1.12em;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.film-recommended .content-principal .arrow-left:hover,
+.film-recommended .content-principal .arrow-right:hover {
+    background: var(--transparent7);
+}
+
+.film-recommended .content-principal .arrow-left {
+    left: 0;
+}
+
+.film-recommended .content-principal .arrow-right {
+    right: 0;
+}
+
+
+/*carousel*/
+
+.film-recommended .content-carousel {
+    width: 100%;
+    padding: 1.25em 0;
+    /*hiden-> todo lo que sobresalga quiero que este 100% oculto*/
+    overflow: hidden;
+    /* overflow-x: scroll; */
+    /*scroll con animacion*/
+    scroll-behavior: smooth;
+}
+
+.film-recommended .content-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.film-recommended .content-carousel .carousel .film {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px var(--transparent3);
+}
+
+.film-recommended .content-carousel .carousel .film.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.film-recommended .content-carousel .carousel .film img {
+    width: 100%;
+    vertical-align: top;
 }
