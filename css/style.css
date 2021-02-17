@@ -141,7 +141,7 @@ header nav a.active {
 }
 
 .content-title-controls .indicators button:hover,
-.content-title-controls .indicators button:active {
+.content-title-controls .indicators button.active {
     background: var(--rojo);
 }
 
