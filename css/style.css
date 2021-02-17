@@ -57,6 +57,20 @@ header nav a.active {
 
 .search {
     border-radius: 0.4em;
+    margin-left: 2em;
+    width: 10em;
+}
+
+.searchIcon {
+    margin-left: 0.4em;
+}
+
+a .searchIcon {
+    color: var(--menu);
+}
+
+a .searchIcon:hover {
+    color: var(--linkActive);
 }
 
 

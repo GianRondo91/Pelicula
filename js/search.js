@@ -1,8 +1,17 @@
 /*********************       **********************/
 
 let search = document.getElementById('search');
+let searchButton = document.getElementById('searchButton');
 
 let recurso = "search";
+
+let clickSearch = evt => {
+    evt.preventDefault();
+    evt.stopPropagation();
+    doSearch();
+};
+
+searchButton.addEventListener('click', clickSearch);
 
 //Buscar por nombre de movie
 let doSearch = () => {

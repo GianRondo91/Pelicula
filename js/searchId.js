@@ -9,14 +9,20 @@ let searchMovieById = (id) => {
 
     fetch(`${base_url}/${criterio}/${id}?api_key=${key}&language=en-US`)
         .then(res => res.json())
-        .then(movie => {
+        .then(data => {
+
+            //si success da false
+            if (!data.success) {
+                alert('Codigo de pelicula invalido');
+                return;
+            }
 
             let detailElement = document.querySelector('.movie-detail');
 
             //Setear imagen, titulo y detalle
-            detailElement.querySelector('.title').innerHTML = movie.title;
-            detailElement.querySelector('.description').innerHTML = movie.overview;
-            detailElement.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${movie.backdrop_path}')`;
+            detailElement.querySelector('.title').innerHTML = data.title;
+            detailElement.querySelector('.description').innerHTML = data.overview;
+            detailElement.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${data.backdrop_path}')`;
 
             //Ocultar feature-movie 
             document.querySelector('.featured-movie').classList.add('hidden');
