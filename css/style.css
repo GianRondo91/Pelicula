@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    padding: 1.87em 0;
+    /* padding: 1.87em 0; */
 }
 
 header .content {
@@ -52,7 +52,7 @@ header nav a.active {
 }
 
 .logo {
-    width: 8em;
+    width: 7em;
 }
 
 
@@ -60,7 +60,8 @@ header nav a.active {
 
 .principal-movie {
     font-size: 1em;
-    min-height: 40.62em;
+    /* min-height: 40.62em; */
+    min-height: 29.7em;
     color: var(--white);
     background: var(--gradient), url(../img/portada.jpg);
     background-position: center center;
@@ -96,12 +97,15 @@ header nav a.active {
     background: var(--transparent5);
     border: none;
     border-radius: 0.31em;
-    padding: 0.93em 1.87em;
+    /* padding: 0.93em 1.87em; */
+    padding: 0.43em 1.8em;
     color: var(--white);
-    margin-left: 1.25em;
+    /* margin-left: 1.25em; */
+    margin-left: 0px;
     cursor: pointer;
     transition: 3.s ease all;
-    font-size: 1.12em;
+    /* font-size: 1.12em; */
+    font-size: 1em;
 }
 
 .principal-movie .button:hover {
@@ -117,7 +121,7 @@ header nav a.active {
 /*content-title-controls*/
 
 .content-title-controls {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: end;
 }
@@ -171,7 +175,8 @@ header nav a.active {
     /*50% del tamaño del contenedor - 25% del alto del boton */
     top: calc(50% - 25%);
     line-height: 2.5em;
-    width: 1.12em;
+    /* width: 1.12em; */
+    width: 1.01em;
     color: var(--white);
     cursor: pointer;
     z-index: 500;
@@ -210,7 +215,8 @@ header nav a.active {
 }
 
 .film-recommended .content-carousel .carousel .film {
-    min-width: 20%;
+    /* min-width: 20%; */
+    min-width: 25%;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px var(--transparent3);
 }
