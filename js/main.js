@@ -1,80 +1,46 @@
-//Constante para aceder a la fila de mis imagenes
+/*PELICULAS RECOMENDADAS*/
+let getRecommendMovies = () => {
+    fetch(`http://api.themoviedb.org/3/movie/upcoming?api_key=bb78e4cf3442e302d928f2c5edcdbee1`)
+        .then(res => res.json())
+        .then(data => {
+            let carousel = document.querySelector('.recommended-films .carousel');
 
-const row = document.querySelector('.content-carousel');
-const films = document.querySelectorAll('film');
+            data.results.forEach(pelicula => {
+                let imagePath = 'img/no-image.png';
 
-const arrowLeft = document.getElementById('arrow-left');
-const arrowRight = document.getElementById('arrow-right');
+                if (pelicula.poster_path) {
+                    imagePath = `https://image.tmdb.org/t/p/w500${pelicula.poster_path}`;
+                }
 
-//EventListener para la flecha derecha
-arrowRight.addEventListener('click', () => {
-    row.scrollLeft += row.offsetWidth;
-
-    const indicatorActive = document.querySelector('.indicators .active');
-
-    //Preguntar si a la drecha tiene un elemento
-    if (indicatorActive.nextSibling) {
-        indicatorActive.nextSibling.classList.add('active');
-        indicatorActive.classList.remove('active');
-    }
-});
-
-//EventListener para la flecha izquierda
-arrowLeft.addEventListener('click', () => {
-    row.scrollLeft -= row.offsetWidth;
-
-    const indicatorActive = document.querySelector('.indicators .active');
-
-    //Preguntar si a la izquierda tiene un elemento -> previousSibling
-    if (indicatorActive.previousSibling) {
-        indicatorActive.previousSibling.classList.add('active');
-        indicatorActive.classList.remove('active');
-    }
-});
-
-
-//----------------PAGINACION - INDICADORES--------------------------
-//Paginacion - CALCULAR cuantas paginas tenemos
-const paginationNumber = Math.ceil(films.length / 5);
-
-//Por cada página, queremos crear un botón
-for (let i = 0; i < paginationNumber; i++) {
-
-    const indicator = document.createElement('button');
-
-    //si estamos en la primera ejecución
-    if (i === 0) {
-        indicator.classList.add('active');
-    }
-
-    document.querySelector('.indicators').appendChild(indicator);
-
-    indicator.addEventListener('click', (e) => {
-        //Multilicamos el ancho por 2
-        row.scrollLeft = i * row.offsetWidth;
-
-        //Si hemos selecciona una pagina, que se marque i desmarque pagina anterior
-        document.querySelector('.indicators .active').classList.remove('active');
-        //Accedemos a (e), el indicador que fue seleccionado. 
-        e.target.classList.add('active');
-    });
+                carousel.innerHTML += `<div class='film'><a href="#"><img src='${imagePath}' class='img-fluid float-end'></img></a></div>`
+                    // console.log(pelicula.poster_path);
+            });
+            createPagination(data.results, document.querySelector('.recommended-films .indicators'));
+        });
 };
 
-//----------------HOVER--------------------------
-//Iteramos por cada una de las peliculas
-films.forEach((film) => {
-    //Por cada pelicula, agregamos un event listener, para que cuando pasemos el cursor, obtengamos el elemento al cual pasamos el cursor
-    film.addEventListener('mouseenter', (e) => {
-        const element = e.currentTarget;
+attachCarouselEvents(document.querySelector('.recommended-films'));
 
-        setTimeout(() => {
-            //Busca todas las peliculas y por cada una de ella, le va a quitar el hover
-            films.forEach(film => film.classList.remove('hover'));
-            element.classList.add('hover');
-        }, 300);
-    })
-});
+let getPopularMovie = () => {
 
-row.addEventListener('mouseleave', () => {
-    films.forEach(film => film.classList.remove('hover'));
-});
+    fetch(`${base_url}/${criterio}/popular?api_key=${key}&language=en-US`)
+        .then(res => res.json())
+        .then(data => {
+            let movie = data.results[Math.floor(Math.random() * (data.results.length - 1))];
+            let detailElement = document.querySelector('.featured-movie');
+
+            //Setear imagen, titulo y detalle
+            detailElement.querySelector('.title').innerHTML = movie.title;
+            detailElement.querySelector('.description').innerHTML = movie.overview;
+            detailElement.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${movie.backdrop_path}')`;
+
+            //Ocultar feature-movie 
+            document.querySelector('.featured-movie').classList.add('hidden');
+
+            //Muestro movie-detail 
+            detailElement.classList.remove('hidden');
+        });
+};
+
+getRecommendMovies();
+getPopularMovie();

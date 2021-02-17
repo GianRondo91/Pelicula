@@ -55,15 +55,19 @@ header nav a.active {
     width: 7em;
 }
 
+.search {
+    border-radius: 0.4em;
+}
+
 
 /*principal-movie*/
 
 .principal-movie {
     font-size: 1em;
-    /* min-height: 40.62em; */
+    /* */
     min-height: 29.7em;
     color: var(--white);
-    background: var(--gradient), url(../img/portada.jpg);
+    background: var(--gradient);
     background-position: center center;
     background-size: cover;
     margin-bottom: 3.12em;
@@ -148,25 +152,25 @@ header nav a.active {
 
 /*film-recommended*/
 
-.film-recommended {
+.films-container {
     margin-bottom: 4.37em;
 }
 
 
 /*films*/
 
-.film a img {
-    /* width: 40em; */
+.hidden {
+    display: none;
 }
 
-.film-recommended .content-principal {
+.films-container .content-principal {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.film-recommended .content-principal .arrow-left,
-.film-recommended .content-principal .arrow-right {
+.films-container .content-principal .arrow-left,
+.films-container .content-principal .arrow-right {
     position: absolute;
     border: none;
     background: var(--transparent3);
@@ -183,23 +187,23 @@ header nav a.active {
     transition: .2s ease all;
 }
 
-.film-recommended .content-principal .arrow-left:hover,
-.film-recommended .content-principal .arrow-right:hover {
+.films-container .content-principal .arrow-left:hover,
+.films-container .content-principal .arrow-right:hover {
     background: var(--transparent7);
 }
 
-.film-recommended .content-principal .arrow-left {
+.films-container .content-principal .arrow-left {
     left: 0;
 }
 
-.film-recommended .content-principal .arrow-right {
+.films-container .content-principal .arrow-right {
     right: 0;
 }
 
 
 /*carousel*/
 
-.film-recommended .content-carousel {
+.films-container .content-carousel {
     width: 100%;
     padding: 1.25em 0;
     /*hiden-> todo lo que sobresalga quiero que este 100% oculto*/
@@ -209,24 +213,24 @@ header nav a.active {
     scroll-behavior: smooth;
 }
 
-.film-recommended .content-carousel .carousel {
+.films-container .content-carousel .carousel {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.film-recommended .content-carousel .carousel .film {
+.films-container .content-carousel .carousel .film {
     /* min-width: 20%; */
     min-width: 25%;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px var(--transparent3);
 }
 
-.film-recommended .content-carousel .carousel .film.hover {
+.films-container .content-carousel .carousel .film.hover {
     transform: scale(1.2);
     transform-origin: center;
 }
 
-.film-recommended .content-carousel .carousel .film img {
-    width: 100%;
+.films-container .content-carousel .carousel .film img {
+    /* width: 100%; */
     vertical-align: top;
 }
