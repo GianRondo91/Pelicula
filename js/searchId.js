@@ -3,7 +3,7 @@
 
 let criterio = "movie";
 let key = 'bb78e4cf3442e302d928f2c5edcdbee1';
-let base_url = `http://api.themoviedb.org/3`;
+let base_url = `https://api.themoviedb.org/3`;
 
 let searchMovieById = (id) => {
 

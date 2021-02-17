@@ -1,6 +1,6 @@
 /*PELICULAS RECOMENDADAS*/
 let getRecommendMovies = () => {
-    fetch(`http://api.themoviedb.org/3/movie/upcoming?api_key=bb78e4cf3442e302d928f2c5edcdbee1`)
+    fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=bb78e4cf3442e302d928f2c5edcdbee1`)
         .then(res => res.json())
         .then(data => {
             let carousel = document.querySelector('.recommended-films .carousel');
