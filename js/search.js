@@ -29,8 +29,8 @@ let doSearch = () => {
         return;
     }
 
-    //Mostrar feature-movie 
-    document.querySelector('.featured-movie').classList.remove('hidden');
+    //Ocultar feature-movie por haber buscado
+    document.querySelector('.featured-movie').classList.add('hidden');
 
     //Ocultar movie-detail 
     document.querySelector('.movie-detail').classList.add('hidden');

@@ -11,8 +11,8 @@ let searchMovieById = (id) => {
         .then(res => res.json())
         .then(data => {
 
-            //si success da false
-            if (!data.success) {
+            //si success es false, hubo un error 
+            if (data.success === false) {
                 alert('Codigo de pelicula invalido');
                 return;
             }
