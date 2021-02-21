@@ -21,6 +21,7 @@ let doSearch = () => {
         alert('Escribe texto en el buscador');
         return;
     }
+
     //Busqueda por ID- numero
     let filmId = parseInt(query);
 
