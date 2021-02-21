@@ -23,6 +23,7 @@ La página web, la tengo dividida en 4 puntos principales:
     Como se ve, la página esta dividida en 3 parte.
     En la parte superior, un menú en el cual el que tiene funcionalidad de momento, es solo el buscador.
     Luego una cartelera y al final un carousel en el cual muestra las peliculas recomendadas.
+    
     <img src="img/pelicula.png" width="50%">
 
 - #### <a name="item1"></a>Cartelera Principal
@@ -62,6 +63,7 @@ La página web, la tengo dividida en 4 puntos principales:
 
 - #### <a name="item4"></a>Buscador por titulo
     Al hacer la busqueda por el nombre de una pelicula, la cartelera se ocultara y en lugar de esta aparecera un nuevo carousel con la busqueda hecha.
+    
     <img src="img/busquedaName.png" width="50%">
 
     Cree una variable en la cual le introduje una imagen de **Imagen no disponible**, para las peliculas que no disponian de imagenes.
