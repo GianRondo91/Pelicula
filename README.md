@@ -1,4 +1,3 @@
-
 <a name="top"></a>
 
 # Buscador de Peliculas :clapper:
@@ -26,7 +25,7 @@ La página web, la tengo dividida en 4 puntos principales:
     </br>
     <img src="img/pelicula.png" width="50%">
     </br>
-    
+
 - #### <a name="item1"></a>Cartelera Principal
     <img src="img/Portada.png" width="50%">
     
