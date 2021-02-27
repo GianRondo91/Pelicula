@@ -6,7 +6,7 @@ Este es mi primer proyecto utilizando una API externa, en este caso TMDB.
 
 
 # 🛠️ Construido con: 
-<img src="img/html5.png" width="40"><img src="img/css3.png" width="40"><img src="img/js.png" width="42"><img src="img/bootstrap.png" width="50"><img src="img/tmdb.png" width="45">
+<img src="https://user-images.githubusercontent.com/56218293/109397724-6d12a500-7938-11eb-8b80-fdb8db2adba2.png" width="40"><img src="https://user-images.githubusercontent.com/56218293/109397717-62f0a680-7938-11eb-80b2-851fcdfadafd.png" width="40"><img src="https://user-images.githubusercontent.com/56218293/109397728-74d24980-7938-11eb-8278-6f9b7adc0796.png" width="42"><img src="https://user-images.githubusercontent.com/56218293/109397731-7ac82a80-7938-11eb-858c-c7c151ef97b1.png" width="50"><img src="https://user-images.githubusercontent.com/56218293/109397736-83206580-7938-11eb-8908-490b5f7fb9a7.png" width="45">
 
 # 🚀 Introducción: 
 La página web, la tengo dividida en 4 puntos principales:
@@ -23,11 +23,11 @@ La página web, la tengo dividida en 4 puntos principales:
     En la parte superior, un menú en el cual el que tiene funcionalidad de momento, es solo el buscador.
     Luego una cartelera y al final un carousel en el cual muestra las peliculas recomendadas.
     </br>
-    <img src="img/pelicula.png" width="50%">
+    <img src="https://user-images.githubusercontent.com/56218293/109397758-a64b1500-7938-11eb-9344-22d5fe327ae6.png" width="50%">
     </br>
 
 - #### <a name="item1"></a>Cartelera Principal
-    <img src="img/Portada.png" width="50%">
+    <img src="https://user-images.githubusercontent.com/56218293/109397747-90d5eb00-7938-11eb-8682-f323cca545b1.png" width="50%">
     
     Por defecto aparece una pelicula al azar.
     ```js
@@ -36,7 +36,7 @@ La página web, la tengo dividida en 4 puntos principales:
     
 - #### <a name="item3"></a>Buscador por Id
     Al buscar por Id, la pelicula al ser una sola, se mostrara directamente en la cartelera principal.
-    <img src="img/Portada.png" width="50%">
+    <img src="https://user-images.githubusercontent.com/56218293/109397747-90d5eb00-7938-11eb-8682-f323cca545b1.png" width="50%">
 
     Comprobación si hubo error al introducir el id de una pelicula.
     ```js
@@ -64,7 +64,7 @@ La página web, la tengo dividida en 4 puntos principales:
 - #### <a name="item4"></a>Buscador por titulo
     Al hacer la busqueda por el nombre de una pelicula, la cartelera se ocultara y en lugar de esta aparecera un nuevo carousel con la busqueda hecha.
     </br>
-    <img src="img/busquedaName.png" width="50%">
+    <img src="https://user-images.githubusercontent.com/56218293/109397750-98958f80-7938-11eb-89cc-62df91908ce5.png" width="50%">
     </br>
 
     Creo una variable en la cual le introduje una imagen de **Imagen no disponible**, para las peliculas que no disponian de imagenes.
